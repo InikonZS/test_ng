@@ -1,0 +1,7 @@
+.gameContainer{
+    overflow: hidden;
+}
+
+.canvas{
+    width: 100%;
+}

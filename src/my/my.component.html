@@ -1,0 +1,6 @@
+<div>
+    <h2>My Component</h2>
+    <counter-component [count]="count" (testOutput)="subscribeTest($event)"></counter-component>
+    <div *ngFor="let item of [1, 2, 3, 4]">--{{item}}</div>
+    <button (click)="handleButtonClick(43)" >button</button>
+</div>
