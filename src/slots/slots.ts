@@ -55,11 +55,11 @@ export class Slots{
             wordWrapWidth: 440,
         });
 
-        const playText = new PIXI.Text('Spin the wheels!', style);
+        // const playText = new PIXI.Text('Spin the wheels!', style);
 
-        playText.x = Math.round((bottom.width - playText.width) / 2);
-        playText.y = app.screen.height - margin + Math.round((margin - playText.height) / 2);
-        bottom.addChild(playText);
+        // playText.x = Math.round((bottom.width - playText.width) / 2);
+        // playText.y = app.screen.height - margin + Math.round((margin - playText.height) / 2);
+        // bottom.addChild(playText);
 
         // Add header text
         const headerText = new PIXI.Text('PIXI MONSTER SLOTS!', style);
@@ -72,17 +72,16 @@ export class Slots{
         app.stage.addChild(bottom);
 
         // Set the interactivity.
-        bottom.eventMode = 'static';
-        bottom.cursor = 'pointer';
-        bottom.addListener('pointerdown', () => {
-            this.startPlay();
-        });
+        // bottom.eventMode = 'static';
+        // bottom.cursor = 'pointer';
+        // bottom.addListener('pointerdown', () => {
+        //    this.startPlay();
+        // });
 
         // Listen for animate update.
         app.ticker.add((delta) => {
         // Update the slots.
-            for (let i = 0; i < this.reels.length; i++)
-            {
+            for (let i = 0; i < this.reels.length; i++){
                 this.reels[i].render(delta);
             }
         });
